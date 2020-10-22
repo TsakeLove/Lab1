@@ -101,8 +101,8 @@ SIZE OF PREVIOUS: 12
 Allocator allocator;
 allocator.init(130);
 void* adr1 = allocator.memory_alloc(10);
-void* adr2 = allocator.memory_alloc(10);
-void* adr3 = allocator.memory_alloc(20);
+void* adr2 = allocator.memory_alloc(8);
+void* adr3 = allocator.memory_alloc(30);
 void* adr4 = allocator.memory_alloc(10);
 allocator.memory_free(adr3);
 allocator.memory_realloc(adr2, 12);
@@ -117,21 +117,21 @@ SIZE OF PREVIOUS: 0
 
 *BLOCK*
 USED:  1
-SIZE:  12
+SIZE:  8
 SIZE OF PREVIOUS: 12
 
 *BLOCK*
 USED:  0
-SIZE:  20
-SIZE OF PREVIOUS: 12
+SIZE:  32
+SIZE OF PREVIOUS: 8
 
 *BLOCK*
 USED:  1
 SIZE:  12
-SIZE OF PREVIOUS: 20
+SIZE OF PREVIOUS: 32
 
 *BLOCK*
 USED:  0
-SIZE:  34
+SIZE:  26
 SIZE OF PREVIOUS: 12
 ```
